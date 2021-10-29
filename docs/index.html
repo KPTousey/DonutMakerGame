@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donut Shop Application</title>
+<link rel="stylesheet" href="../src/css/style.css">
+</head>
+<body>
+    <header> 
+        <div class="header-container">
+        <img src="/src/images/donuts-head.jpg" alt="donuts">
+
+        <h1 class="center">Donut Shop Application</h1>
+
+        <img src="/src/images/store.jpg" alt="store front">
+
+    </div>
+        
+ <div class="center">     
+<!-- Modal1 -->
+<button class="button" id="myBtn1">Open Modal1</button>
+<div id="myModal1" class="modal1">
+  <!-- content -->
+  <div class="modal-content">
+    <span class="close1">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+<!-- Modal2 -->
+<button  class="button" id="myBtn2">Open Modal2</button>
+<div id="myModal2" class="modal2">
+  <!-- content -->
+  <div class="modal-content">
+    <span class="close2">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+<!-- Modal3 -->
+<button  class="button" id="myBtn3">Open Modal3</button>
+<div id="myModal3" class="modal3">
+  <!-- content -->
+  <div class="modal-content">
+    <span class="close3">&times;</span>
+    <p>Some text in the Modal..</p>
+  </div>
+
+</div>
+</div>  
+    </header>
+
+<div class="donut-container">
+ <button id="donutButton" class="button">Make Donuts</button>
+ <div id="donutCountOutput"></div>
+ <div class="multiplier-container fixed-width">
+ <p><strong><span id="donutsPerClick"></span></strong><br><br> Donuts Per Click</p>
+</div></div>
+
+<div class="addon-container">
+
+<div class="multiplier-container">
+ <p>Number of Multipliers:</p>
+ <div id="numMultiplierOutput"></div>
+ <p>(<span id="multiplierCost"></span>)</p>
+<button id="purchaseMultiplierButton" class="greenbutton">Buy Multiplier</button>
+</div>
+
+<button id="resetButton" class="redbutton">Reset</button>
+
+<div class="autoclicker-container">
+ <p>Number of AutoClickers:</p>
+ <div id="numAutoClickerOutput"></div>
+ <p>(<span id="autoClickerCost"></span>)</p>
+  <button id="purchaseAutoClickerButton" class="greenbutton">Buy AutoClicker</button>
+</div>
+
+</div>
+
+
+
+<footer>
+    <p class="center">Kevin Tousey/WeCanCodeIT©</p>
+    <a href="https://www.freepik.com/vectors/business">Business vector created by freepik - www.freepik.com</a>
+</footer>
+<script src="/src/js/DonutStore.js"></script>
+<script src="../src/js/app.js"></script>
+</body>
+</html>

@@ -169,6 +169,8 @@ footer {
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
+    font-family: 'Satisfy', cursive;
+    font-size: 30px;
   }
   
   /* The Close Button */

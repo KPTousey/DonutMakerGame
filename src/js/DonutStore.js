@@ -15,6 +15,18 @@ class DonutStore {
         this.donutsPerClick = Math.pow(1.2, this.numMultipliers);
         this.donutsEarned += this.donutsPerClick;
         this.retrieveDonutCount();
+        if (this.donutsEarned > this.multiplierCost) {
+            purchaseMultiplierButton.classList.remove("disabled");
+        }
+        if (this.donutsEarned < this.multiplierCost) {
+            purchaseMultiplierButton.classList.add("disabled");
+        }
+        if (this.donutsEarned > this.autoClickerCost) {
+            purchaseAutoClickerButton.classList.remove("disabled");
+        }
+        if (this.donutsEarned < this.autoClickerCost) {
+            purchaseAutoClickerButton.classList.add("disabled");
+        }
     }
 
     reset() {
@@ -32,6 +44,8 @@ class DonutStore {
         this.donutsPerClick = 1;
         donutsPerClickOutput.innerText = this.donutsPerClick;
         this.myClickerId = undefined;
+        purchaseMultiplierButton.classList.add("disabled");
+        purchaseAutoClickerButton.classList.add("disabled");
     }
 
     autoDonut = () => {
@@ -54,6 +68,7 @@ class DonutStore {
             this.autoClickerCost += this.autoClickerCost * .1; 
             autoClickerCosting.innerText = this.autoClickerCost;
             this.autoClickerEnable();
+            purchaseAutoClickerButton.classList.remove("disabled");
         }
     }
 
@@ -66,6 +81,7 @@ class DonutStore {
             multiplierCost.innerText = Math.round(this.multiplierCost);
             donutCountOutput.innerText = Math.round(this.donutsEarned);
             donutsPerClickOutput.innerText = this.donutsPerClick;
+            purchaseMultiplierButton.classList.remove("disabled");
         }
     }
 

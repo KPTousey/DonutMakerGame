@@ -118,8 +118,12 @@ footer {
 .redbutton:hover,
 .greenbutton:hover,
 .button:hover {
-    background-color: lightgrey;
     transform: scale(1.05);
+}
+
+.disabled {
+    background-color: darkgray;
+    color: rgb(109, 102, 102);
 }
 
 #donutCountOutput {
